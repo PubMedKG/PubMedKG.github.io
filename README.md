@@ -1,8 +1,5 @@
 # PubMed-Knowledge-Graph
 We will publish the latest download link for the dataset here, as well as some necessary instructions.
-# PKG2.0
-![PCP_reverse](https://github.com/PubMedKG/PubMedKG.github.io/assets/56544472/1e9ae827-6273-4efa-9a2a-4494dc5787ce)
-![PKG2 0_ER](https://github.com/PubMedKG/PubMedKG.github.io/assets/56544472/91063be0-cb88-40ae-bbbf-61faab0b219f)
 
 # Download
 The latest PKG version is available on Sun Yat-sen University's [cloud disk](https://pan.sysu.edu.cn/#/link/EF1C89E4F3B85F4FDE6FFB1C630E2D23&lang=en)).
