@@ -10,7 +10,7 @@ PKG takes up a lot of disk space, so clicking on the folder icon and downloading
 Database Features: [1-PKG2023S4 (1781-Dec. 2023) Features.pdf](https://github.com/PubMedKG/PubMedKG.github.io/blob/main/1-PKG2023S4%20(1781-Dec.%202023)%20Features.pdf)
 
 
-Database Description: [2-PKG2021S4 (1781-Dec. 2021) Database Description.pdf](https://github.com/PubMedKG/PubMedKG.github.io/blob/main/2-PKG2021S4%20(1781-Dec.%202021)%20Database%20Description.pdf)
+Database Description: [2-PKG2023S4 (1781-Dec. 2023) Database Description.pdf](https://github.com/PubMedKG/PubMedKG.github.io/blob/main/2-PKG2023S4%20(1781-Dec.%202023)%20Database%20Description.pdf)
 
 # Citation
 Xu, J., Kim, S., Song, M. et al. Building a PubMed knowledge graph. Sci Data 7, 205 (2020). https://doi.org/10.1038/s41597-020-0543-2
