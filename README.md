@@ -7,7 +7,7 @@ The latest PKG version is available on Sun Yat-sen University's [cloud disk](htt
 PKG takes up a lot of disk space, so clicking on the folder icon and downloading the subset you need is recommended.
 
 
-Database Features: [1-PKG2021S4 (1781-Dec. 2021) Features.pdf](https://github.com/PubMedKG/PubMedKG.github.io/blob/main/1-PKG2021S4%20(1781-Dec.%202021)%20Features.pdf)
+Database Features: [1-PKG2023S4 (1781-Dec. 2023) Features.pdf](https://github.com/PubMedKG/PubMedKG.github.io/blob/main/1-PKG2023S4%20(1781-Dec.%202023)%20Features.pdf)
 
 
 Database Description: [2-PKG2021S4 (1781-Dec. 2021) Database Description.pdf](https://github.com/PubMedKG/PubMedKG.github.io/blob/main/2-PKG2021S4%20(1781-Dec.%202021)%20Database%20Description.pdf)
