@@ -2,7 +2,7 @@
 We will publish the latest download link for the dataset here, as well as some necessary instructions.
 
 # Download
-The latest PKG version is available on Sun Yat-sen University's [cloud disk](https://pan.sysu.edu.cn/#/link/EF1C89E4F3B85F4FDE6FFB1C630E2D23&lang=en)).
+The latest PKG version is available on Sun Yat-sen University's [cloud disk](https://pan.sysu.edu.cn/anyshare/en-us/link/EF1C89E4F3B85F4FDE6FFB1C630E2D23)).
 
 PKG takes up a lot of disk space, so clicking on the folder icon and downloading the subset you need is recommended.
 
