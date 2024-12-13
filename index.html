@@ -75,10 +75,15 @@
     
     <h3>FAQ</h3>
     <p>1. How to decompress the .gz files?</p>
-    <p>&nbsp;&nbsp;On Windows systems, it is recommended to use <a href="https://www.7-zip.org/">7-Zip</a>, as the split files can be decompressed without the need to integrate them.</p>
-    <p>&nbsp;&nbsp;On Linux systems, the following command can be used for decompression: "gunzip < filename.gz"</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;"cat backup.part* > backup.gz"</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;"gunzip backup.gz"</p>
+
+    <ul>
+        <li><strong>Tables starting with 'A'</strong>: These tables contain the original data tables of PubMed.</li>
+        <li><strong>Tables starting with 'B'</strong>: These tables include raw data from other sources used during our data processing. Some of the data also form part of the PKG.</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On Windows systems, it is recommended to use <a href="https://www.7-zip.org/">7-Zip</a>, as the split files can be decompressed without the need to integrate them.</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On Linux systems, the following command can be used for decompression: "gunzip < filename.gz"</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"cat tablename.sql.gz.* > tablename.sql.gz"</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"gunzip tablename.sql.gz"</p>
 
     
     
