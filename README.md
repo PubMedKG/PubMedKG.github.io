@@ -13,6 +13,8 @@ Database Features: [1-PKG2023S4 (1781-Dec. 2023) Features.pdf](https://github.co
 Database Description: [2-PKG2023S4 (1781-Dec. 2023) Database Description.pdf](https://github.com/PubMedKG/PubMedKG.github.io/blob/main/2-PKG2023S4%20(1781-Dec.%202023)%20Database%20Description.pdf)
 
 # Citation
+Xu, J., Yu, C., Xu, J. et al. PubMed knowledge graph 2.0: Connecting papers, patents, and clinical trials in biomedical science. Sci Data 12, 1018 (2025). https://doi.org/10.1038/s41597-025-05343-8
+
 Xu, J., Kim, S., Song, M. et al. Building a PubMed knowledge graph. Sci Data 7, 205 (2020). https://doi.org/10.1038/s41597-020-0543-2
 
 # Contact Information
