@@ -63,12 +63,11 @@
         <li><strong>Tables starting with 'C'</strong>: These tables represent the core data of PKG, centered around Papers, Patents, and Clinical Trials.</li>
     </ul>
 
-    <p>All the data of PKG 2.0 have been stored in SQL files, which can be downloaded from <a href="https://www.scidb.cn/en/detail?dataSetId=47da4ac08e9540889a33fbdd3ebf26ce&version=V1">Science Data Bank</a>. Additionally, tables starting with 'C' have been organized in TSV format and can be downloaded from <a href="https://figshare.com/s/05158da6355d6199d3b7">figshare</a>. Please refer to the <a href="https://github.com/PubMedKG/PubMedKG.github.io/blob/main/1-PKG2023S4%20(1781-Dec.%202023)%20Features.pdf">Database Features</a> and the <a href="https://github.com/PubMedKG/PubMedKG.github.io/blob/main/PKG%202.0%20Database%20Description.pdf">Database Description</a> for more details about how to use the PKG dataset.</p>
+    <p>All the data of PKG 2.0 have been stored in SQL and TSV files , which can be downloaded from <a href="https://www.scidb.cn/en/preview?dataSetId=47da4ac08e9540889a33fbdd3ebf26ce&version=V2">Science Data Bank</a>. Additionally, tables starting with 'C' have been organized in TSV format and can be downloaded from <a href="https://figshare.com/s/05158da6355d6199d3b7">figshare</a>. Please refer to the <a href="https://github.com/PubMedKG/PubMedKG.github.io/blob/main/1-PKG2023S4%20(1781-Dec.%202023)%20Features.pdf">Database Features</a> and the <a href="https://github.com/PubMedKG/PubMedKG.github.io/blob/main/PKG%202.0%20Database%20Description.pdf">Database Description</a> for more details about how to use the PKG dataset.</p>
 
     <h3>Download</h3>
     <ul>
-        <li><strong>TSV format, the main data for PKG 2.0, including tables starting with C:</strong> <a href="https://figshare.com/s/05158da6355d6199d3b7">Download PKG (TSV)</a></li>
-        <li><strong>SQL format, all data related to PKG 2.0, including tables starting with A, B, and C:</strong> <a href="https://www.scidb.cn/en/detail?dataSetId=47da4ac08e9540889a33fbdd3ebf26ce&version=V1">Download PKG (SQL)</a></li>
+        <li><strong>Dataset: </strong> <a href="https://www.scidb.cn/en/preview?dataSetId=47da4ac08e9540889a33fbdd3ebf26ce&version=V2">PKG24S2</a></li>
         <li><strong>Dataset Features:</strong> <a href="https://github.com/PubMedKG/PubMedKG.github.io/blob/main/1-PKG2023S4%20(1781-Dec.%202023)%20Features.pdf">1-PKG2023S4 (1781-Dec. 2023) Features.pdf</a></li>
         <li><strong>Dataset Description:</strong> <a href="https://github.com/PubMedKG/PubMedKG.github.io/blob/main/PKG%202.0%20Dataset%20Description.pdf">2-PKG 2.0 Dataset Description.pdf</a></li>
     </ul>
@@ -84,6 +83,9 @@
     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"md5sum -c tablename.sql.gz.md5sum"</p>    
 
     <h3>Updates</h3>
+    
+    <p>[Jul 20, 2025] The PKG dataset has been updated to PKG24S2 based on the PubMed 2025 Baseline. Meanwhile, data from other sources integrated in the dataset have also been updated correspondingly to ensure the timeliness and consistency of the overall data.
+</p>
     <p>[Jun 17, 2025] The personal privacy information such as name, gender, and race were deleted to comply with personal data protection requirements.</p>
     <p>[Apr 17, 2025] C04_ReferenceList_Papers: Delete citation data from OpenCitations to avoid incorrect data caused by some ID mappings.</p>
     
