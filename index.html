@@ -10,9 +10,9 @@
     <style>
         /* ================= 核心变量定义 ================= */
         :root {
-            --primary-color: #0056b3; /* 科研深蓝 - 主色调 */
-            --secondary-color: #00a8e8; /* 亮蓝 - 强调色 */
-            --accent-color: #f8f9fa; /* 浅灰背景 */
+            --primary-color: #0056b3;
+            --secondary-color: #00a8e8;
+            --accent-color: #f8f9fa;
             --text-dark: #2c3e50;
             --text-light: #596a7d;
             --white: #ffffff;
@@ -22,20 +22,14 @@
         }
 
         /* ================= 全局基础样式 ================= */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--white);
             scroll-behavior: smooth;
         }
-
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
 
@@ -47,7 +41,6 @@
             top: 0;
             z-index: 1000;
         }
-
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -56,7 +49,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -65,39 +57,18 @@
             align-items: center;
             gap: 0.5rem;
         }
-
-        .nav-links a {
-            margin-left: 2rem;
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-
+        .nav-links a { margin-left: 2rem; font-weight: 500; color: var(--text-dark); }
         .nav-links a:hover { color: var(--primary-color); }
 
-        /* ================= Hero 区域 (首屏) ================= */
+        /* ================= Hero 区域 ================= */
         .hero {
             background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
             padding: 6rem 2rem 5rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
+        .hero h1 { font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem; font-weight: 700; }
+        .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 800px; margin: 0 auto 2.5rem; }
 
-        .hero h1 {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            max-width: 800px;
-            margin: 0 auto 2.5rem;
-        }
-
-        /* 按钮样式 */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -108,34 +79,19 @@
             border-radius: 50px;
             font-weight: bold;
             box-shadow: var(--shadow);
+            cursor: pointer; /* 确保鼠标变成手型 */
         }
-
-        .btn:hover {
-            background-color: #004494;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-        }
-
+        .btn:hover { background-color: #004494; transform: translateY(-2px); box-shadow: var(--shadow-hover); }
         .btn-outline {
             background-color: transparent;
             border: 2px solid var(--primary-color);
             color: var(--primary-color);
             margin-left: 1rem;
         }
+        .btn-outline:hover { background-color: var(--primary-color); color: var(--white); }
 
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* ================= 统计数据卡片 (悬浮效果) ================= */
-        .stats-section {
-            padding: 0 2rem;
-            margin-top: -3rem; /* 向上偏移，产生悬浮感 */
-            position: relative;
-            z-index: 10;
-        }
-
+        /* ================= 统计数据卡片 ================= */
+        .stats-section { padding: 0 2rem; margin-top: -3rem; position: relative; z-index: 10; }
         .stats-grid {
             max-width: 1000px;
             margin: 0 auto;
@@ -143,277 +99,88 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
         }
-
         .stat-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
+            background: var(--white); padding: 2rem; border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;
             border-top: 4px solid var(--secondary-color);
         }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary-color); display: block; }
+        .stat-label { color: var(--text-light); font-weight: 500; text-transform: uppercase; font-size: 0.85rem; margin-top: 0.5rem; }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: block;
-        }
-
-        .stat-label {
-            color: var(--text-light);
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            margin-top: 0.5rem;
-        }
-
-        /* ================= 通用区块布局 ================= */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-            text-align: center;
-            position: relative;
-        }
-        
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--secondary-color);
-            margin: 1rem auto 0;
-            border-radius: 2px;
-        }
+        /* ================= 通用区块 ================= */
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        h2 { font-size: 2.2rem; margin-bottom: 3rem; color: var(--text-dark); text-align: center; position: relative; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--secondary-color); margin: 1rem auto 0; border-radius: 2px; }
 
         /* ================= 关于部分 ================= */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .text-block p { margin-bottom: 1.5rem; text-align: justify; color: var(--text-light); }
+        .feature-list li { margin-bottom: 1.2rem; display: flex; align-items: flex-start; }
+        .feature-list i { color: var(--secondary-color); margin-right: 1rem; margin-top: 5px; }
 
-        .text-block p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-            color: var(--text-light);
-            font-size: 1.05rem;
-        }
-
-        .feature-list li {
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: flex-start;
-            font-size: 1.05rem;
-        }
-
-        .feature-list i {
-            color: var(--secondary-color);
-            margin-right: 1rem;
-            margin-top: 5px;
-            font-size: 1.2rem;
-        }
-
-        /* ================= 数据结构部分 ================= */
-        .data-structure {
-            background-color: var(--accent-color);
-            border-radius: var(--border-radius);
-            margin-top: 2rem;
-        }
-
-        .table-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
+        /* ================= 数据结构 ================= */
+        .data-structure { background-color: var(--accent-color); border-radius: var(--border-radius); margin-top: 2rem; }
+        .table-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .table-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            transition: transform 0.3s;
+            background: var(--white); padding: 2rem; border-radius: var(--border-radius);
+            box-shadow: var(--shadow); transition: transform 0.3s;
         }
-
         .table-card:hover { transform: translateY(-5px); }
-
-        .table-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            font-size: 1.3rem;
-        }
-        
+        .table-card h3 { color: var(--primary-color); margin-bottom: 1rem; display: flex; align-items: center; font-size: 1.3rem; }
         .table-card h3 i { margin-right: 0.8rem; opacity: 0.8; }
         .table-card p { color: var(--text-light); }
 
-        /* ================= 更新日志 (时间轴) ================= */
-        .updates-timeline {
-            border-left: 3px solid #e1e4e8;
-            margin-left: 2rem;
-            padding-left: 2.5rem;
-        }
-
-        .update-item {
-            margin-bottom: 2.5rem;
-            position: relative;
-        }
-
+        /* ================= 更新日志 ================= */
+        .updates-timeline { border-left: 3px solid #e1e4e8; margin-left: 2rem; padding-left: 2.5rem; }
+        .update-item { margin-bottom: 2.5rem; position: relative; }
         .update-item::before {
-            content: '';
-            width: 16px;
-            height: 16px;
-            background: var(--white);
-            border: 3px solid var(--secondary-color);
-            border-radius: 50%;
-            position: absolute;
-            left: -2.9rem; /* 调整圆点位置对齐线条 */
-            top: 4px;
+            content: ''; width: 16px; height: 16px; background: var(--white);
+            border: 3px solid var(--secondary-color); border-radius: 50%;
+            position: absolute; left: -2.9rem; top: 4px;
         }
-
-        .update-date {
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
+        .update-date { font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; display: block; }
 
         /* ================= 下载与资源 ================= */
         .download-box {
             background: linear-gradient(to right, #eef5ff, #f4f9ff);
-            border: 1px solid #d0e1f9;
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 4rem;
-            text-align: center;
+            border: 1px solid #d0e1f9; padding: 3rem; border-radius: var(--border-radius);
+            margin-bottom: 4rem; text-align: center;
         }
-        
-        .download-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
+        .download-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
 
-        /* ================= FAQ 优化样式 (卡片分栏) ================= */
-        .faq-section h3 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--text-dark);
-        }
-
-        .os-guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            text-align: left;
-        }
-
+        /* FAQ 样式 */
+        .faq-section h3 { text-align: center; margin-bottom: 2rem; color: var(--text-dark); }
+        .os-guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; text-align: left; }
         .os-card {
-            background: #fff;
-            border: 1px solid #e1e4e8;
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
+            background: #fff; border: 1px solid #e1e4e8; border-radius: var(--border-radius);
+            padding: 2rem; transition: all 0.3s ease;
         }
-
-        .os-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--secondary-color);
-        }
-
-        .os-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.2rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .os-header i {
-            font-size: 1.8rem;
-            margin-right: 0.8rem;
-        }
+        .os-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: var(--secondary-color); }
+        .os-header { display: flex; align-items: center; margin-bottom: 1.2rem; font-size: 1.3rem; font-weight: 700; color: var(--text-dark); }
+        .os-header i { font-size: 1.8rem; margin-right: 0.8rem; }
         .os-header .fa-windows { color: #0078D6; }
         .os-header .fa-linux { color: #333; }
-
-        .tool-link {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--primary-color);
-            font-weight: 500;
-            text-decoration: none;
-        }
-        
-        .tool-link:hover { text-decoration: underline; }
-
-        /* 代码块美化 */
+        .tool-link { display: inline-block; margin-top: 1rem; color: var(--primary-color); font-weight: 500; }
         .code-box {
-            background: #282c34;
-            color: #abb2bf;
-            padding: 1rem;
-            border-radius: 6px;
-            margin-top: 1rem;
-            font-family: 'Consolas', 'Monaco', monospace;
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-left: 4px solid var(--secondary-color);
+            background: #282c34; color: #abb2bf; padding: 1rem; border-radius: 6px;
+            margin-top: 1rem; font-family: 'Consolas', 'Monaco', monospace; font-size: 0.9rem;
+            display: flex; justify-content: space-between; align-items: center; border-left: 4px solid var(--secondary-color);
         }
+        .copy-icon { cursor: pointer; color: #5c6370; }
 
-        .code-box code { word-break: break-all; }
-        
-        .copy-icon {
-            cursor: pointer;
-            color: #5c6370;
-            transition: color 0.2s;
-        }
-        .copy-icon:hover { color: #fff; }
-
-        /* ================= 引用部分 ================= */
+        /* ================= 引用与页脚 ================= */
         .citation-box {
-            background: #f1f3f5;
-            padding: 1.5rem;
-            border-left: 4px solid var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-family: 'Consolas', monospace;
-            font-size: 0.9rem;
-            color: #444;
-            overflow-x: auto;
-            border-radius: 0 4px 4px 0;
+            background: #f1f3f5; padding: 1.5rem; border-left: 4px solid var(--primary-color);
+            margin-bottom: 1.5rem; font-family: 'Consolas', monospace; font-size: 0.9rem;
+            color: #444; overflow-x: auto; border-radius: 0 4px 4px 0;
         }
-
-        /* ================= 页脚 ================= */
-        footer {
-            background: #1a1a1a;
-            color: #888;
-            padding: 4rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-        
+        footer { background: #1a1a1a; color: #888; padding: 4rem 2rem; text-align: center; margin-top: 4rem; }
         footer a { color: #fff; text-decoration: underline; }
-        footer p { margin-bottom: 0.5rem; }
 
-        /* ================= 响应式适配 ================= */
+        /* ================= 响应式 ================= */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
-            .nav-links { display: none; } /* 移动端暂隐菜单 */
+            .nav-links { display: none; }
             .about-content { grid-template-columns: 1fr; gap: 2rem; }
             .download-links { flex-direction: column; }
             .btn-outline { margin-left: 0; }
@@ -424,14 +191,12 @@
 
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">
-                <i class="fas fa-project-diagram"></i> PKG 2.0
-            </a>
+            <a href="#" class="logo"><i class="fas fa-project-diagram"></i> PKG 2.0</a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#data">Data Structure</a>
                 <a href="#updates">Updates</a>
-                <a href="#download">Download & FAQ</a>
+                <a href="#download">Download</a>
                 <a href="#citation">Citation</a>
             </div>
         </div>
@@ -451,16 +216,13 @@
     <div class="stats-section">
         <div class="stats-grid">
             <div class="stat-card">
-                <span class="stat-number">36M+</span>
-                <span class="stat-label">Scientific Papers</span>
+                <span class="stat-number">36M+</span><span class="stat-label">Scientific Papers</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number">1.3M+</span>
-                <span class="stat-label">Biomedical Patents</span>
+                <span class="stat-number">1.3M+</span><span class="stat-label">Biomedical Patents</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number">0.48M+</span>
-                <span class="stat-label">Clinical Trials</span>
+                <span class="stat-number">0.48M+</span><span class="stat-label">Clinical Trials</span>
             </div>
         </div>
     </div>
@@ -474,10 +236,10 @@
             </div>
             <div class="features-block">
                 <ul class="feature-list">
-                    <li><i class="fas fa-check-circle"></i> <strong>Entity Integration:</strong> Comprehensive biomedical entities (Bio-entities).</li>
-                    <li><i class="fas fa-users"></i> <strong>Author Disambiguation:</strong> High-precision author networks & affiliation history.</li>
-                    <li><i class="fas fa-project-diagram"></i> <strong>Cross-Domain Links:</strong> Citation relationships across papers and patents.</li>
-                    <li><i class="fas fa-flask"></i> <strong>Funding Data:</strong> Detailed connections to NIH funding & research projects.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Entity Integration:</strong> Bio-entities extraction.</li>
+                    <li><i class="fas fa-users"></i> <strong>Author Disambiguation:</strong> High-precision author networks.</li>
+                    <li><i class="fas fa-project-diagram"></i> <strong>Cross-Domain Links:</strong> Citation relationships.</li>
+                    <li><i class="fas fa-flask"></i> <strong>Funding Data:</strong> NIH funding & research projects.</li>
                 </ul>
             </div>
         </div>
@@ -485,19 +247,18 @@
 
     <section id="data" style="background-color: #fafafa;">
         <h2>Data Organization</h2>
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">The dataset is organized into relational database tables (SQL & TSV formats).</p>
         <div class="table-cards">
             <div class="table-card">
                 <h3><i class="fas fa-table"></i> Table A Series</h3>
-                <p>Contains the <strong>original data tables</strong> directly from PubMed source files (XML parsed).</p>
+                <p>Contains the original data tables directly from PubMed source files (XML parsed).</p>
             </div>
             <div class="table-card">
                 <h3><i class="fas fa-layer-group"></i> Table B Series</h3>
-                <p>Includes <strong>raw data from other sources</strong> (NIH ExPORTER, ORCID, etc.) used during processing.</p>
+                <p>Includes raw data from other sources (NIH ExPORTER, ORCID, etc.) used during processing.</p>
             </div>
             <div class="table-card">
                 <h3><i class="fas fa-star"></i> Table C Series</h3>
-                <p>Represents the <strong>core data of PKG</strong>, centered around Papers, Patents, and Clinical Trials entities.</p>
+                <p>Represents the core data of PKG, centered around Papers, Patents, and Clinical Trials entities.</p>
             </div>
         </div>
     </section>
@@ -534,13 +295,15 @@
             <p>All data is stored in SQL and TSV files available via Science Data Bank.</p>
             
             <div class="download-links">
-                <a href="#" class="btn">
+                <a href="https://www.scidb.cn/en/detail?dataSetId=47da4ac08e9540889a33fbdd3ebf26ce" target="_blank" class="btn">
                     <i class="fas fa-external-link-alt"></i> Go to Science Data Bank
                 </a>
-                <a href="#" class="btn btn-outline">
+                
+                <a href="https://github.com/PubMedKG/PubMedKG.github.io/blob/main/1-PKG2023S4%20(1781-Dec.%202023)%20Features.pdf" target="_blank" class="btn btn-outline">
                     <i class="fas fa-file-pdf"></i> Dataset Features
                 </a>
-                <a href="#" class="btn btn-outline">
+                
+                <a href="https://github.com/PubMedKG/PubMedKG.github.io/blob/main/PKG%202.0%20Database%20Description.pdf" target="_blank" class="btn btn-outline">
                     <i class="fas fa-file-pdf"></i> Dataset Description
                 </a>
             </div>
@@ -550,26 +313,14 @@
             <h3><i class="fas fa-question-circle"></i> FAQ: How to decompress .gz files?</h3>
             <div class="os-guide-grid">
                 <div class="os-card">
-                    <div class="os-header">
-                        <i class="fab fa-windows"></i>
-                        <span>Windows</span>
-                    </div>
-                    <p>We recommend using <strong>7-Zip</strong> or WinRAR to extract the large .gz files efficiently.</p>
-                    <a href="https://www.7-zip.org/" target="_blank" class="tool-link">
-                        Download 7-Zip <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <div class="os-header"><i class="fab fa-windows"></i><span>Windows</span></div>
+                    <p>We recommend using <strong>7-Zip</strong> or WinRAR.</p>
+                    <a href="https://www.7-zip.org/" target="_blank" class="tool-link">Download 7-Zip <i class="fas fa-arrow-right"></i></a>
                 </div>
-
                 <div class="os-card">
-                    <div class="os-header">
-                        <i class="fab fa-linux"></i>
-                        <span>Linux / macOS</span>
-                    </div>
-                    <p>Use the following terminal command:</p>
-                    <div class="code-box">
-                        <code>gunzip tablename.sql.gz</code>
-                        <i class="far fa-copy copy-icon" title="Copy to clipboard"></i>
-                    </div>
+                    <div class="os-header"><i class="fab fa-linux"></i><span>Linux / macOS</span></div>
+                    <p>Use terminal command:</p>
+                    <div class="code-box"><code>gunzip tablename.sql.gz</code><i class="far fa-copy copy-icon"></i></div>
                 </div>
             </div>
         </div>
@@ -577,14 +328,9 @@
 
     <section id="citation" style="background-color: #f8f9fa;">
         <h2>Citation</h2>
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">
-            If you use PKG in your research, please cite the following papers:
-        </p>
-        
         <div class="citation-box">
             Xu, J., Yu, C., Xu, J. et al. PubMed knowledge graph 2.0: Connecting papers, patents, and clinical trials in biomedical science. Sci Data 12, 1018 (2025). https://doi.org/10.1038/s41597-025-05343-8
         </div>
-
         <div class="citation-box">
             Xu, J., Kim, S., Song, M., et al. (2020). Building a PubMed knowledge graph. Scientific Data, 7, 205. https://doi.org/10.1038/s41597-020-0543-2
         </div>
@@ -592,10 +338,7 @@
 
     <footer>
         <p>Copyright &copy; 2025 PKG Project. Licensed under the <a href="#">MIT License</a>.</p>
-        <p>
-            Contact Author: Jian Xu at 
-            <a href="mailto:issxj@mail.sysu.edu.cn">issxj@mail.sysu.edu.cn</a>
-        </p>
+        <p>Contact Author: Jian Xu at <a href="mailto:issxj@mail.sysu.edu.cn">issxj@mail.sysu.edu.cn</a></p>
     </footer>
 
 </body>
