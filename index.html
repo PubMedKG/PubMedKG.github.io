@@ -185,6 +185,28 @@
             .download-links { flex-direction: column; }
             .btn-outline { margin-left: 0; }
         }
+        /* ================= 预告 Banner 样式 ================= */
+         .announcement-banner {
+             display: inline-flex;
+             align-items: center;
+             gap: 12px;
+             background: #fff3cd;
+             border: 1px solid #ffeeba;
+             color: #856404;
+             padding: 10px 24px;
+             border-radius: 50px;
+             margin-bottom: 2rem;
+             font-size: 1.1rem;
+             font-weight: 500;
+             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+             animation: fadeInDown 0.8s ease-out;
+         }
+         .announcement-banner i { color: #d39e00; font-size: 1.2rem; }
+         .update-item.upcoming::before { border-color: #f39c12; background: #fff3cd; }
+         @keyframes fadeInDown {
+             from { opacity: 0; transform: translateY(-20px); }
+             to { opacity: 1; transform: translateY(0); }
+         }
     </style>
 </head>
 <body>
@@ -204,6 +226,10 @@
 
     <header class="hero">
         <h1>PubMed Knowledge Graph 2.0</h1>
+        <div class="announcement-banner">
+             <i class="fas fa-bullhorn"></i>
+                <span><strong>Coming Soon:</strong> PKG25S4 is scheduled for release around <strong>July 2026</strong>. Stay tuned!</span>
+         </div>
         <p>Connecting papers, patents, and clinical trials in biomedical science.<br>A comprehensive resource for next-generation knowledge discovery.</p>
         <div>
             <a href="#download" class="btn"><i class="fas fa-cloud-download-alt"></i> Get Dataset</a>
@@ -244,7 +270,15 @@
             </div>
         </div>
     </section>
-
+    <section id="updates" style="background-color: var(--accent-color); border-radius: var(--border-radius); padding: 4rem 2rem; margin-bottom: 3rem;">
+        <h2>Updates & News</h2>
+        <div class="updates-timeline">
+            <div class="update-item upcoming">
+                <span class="update-date">Scheduled for July 2026</span>
+                <p><strong>PKG25S4 Preview:</strong> The next major update is coming soon! This version will include the latest data synchronization and enhanced cross-database entity links.</p>
+            </div>
+        </div>
+    </section>
     <section id="data" style="background-color: #fafafa;">
         <h2>Data Organization</h2>
         <div class="table-cards">
